@@ -124,7 +124,7 @@ const Registrasi = () => {
                 </View>
                 <View>
                     <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-                        <TextInput placeholder="Nama" tabIndex={1} style={{ borderWidth: 1, borderColor: '#000', marginTop: 30, borderRadius: 8, paddingLeft: 15, fontSize: 14, color: '#000', fontWeight: 'bold', flex: 1, marginLeft: 25 }} value={nama} onChangeText={(text) => { setNama(text) }} />
+                        <TextInput placeholder="Nama" autoFocus tabIndex={1} style={{ borderWidth: 1, borderColor: '#000', marginTop: 30, borderRadius: 8, paddingLeft: 15, fontSize: 14, color: '#000', fontWeight: 'bold', flex: 1, marginLeft: 25 }} value={nama} onChangeText={(text) => { setNama(text) }} />
                         <TextInput placeholder="Username" tabIndex={2} style={{ borderWidth: 1, borderColor: '#000', marginTop: 30, borderRadius: 8, paddingLeft: 15, fontSize: 14, color: '#000', fontWeight: 'bold', flex: 1, marginLeft: 10, marginRight: 25 }} value={username} onChangeText={(text) => { setUsername(text) }} />
                     </View>
                     <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
@@ -145,10 +145,10 @@ const Registrasi = () => {
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
-                    <TouchableOpacity style={{ backgroundColor: "#2196F3", padding: 15, borderRadius: 10, marginHorizontal: 25, marginTop: 20, width: 160 }} onPress={btnRegistrasi}>
+                    <TouchableOpacity style={{ backgroundColor: "#2196F3", padding: 15, borderRadius: 10, marginHorizontal: 23, marginTop: 20, width: 160, elevation: 5 }} onPress={btnRegistrasi}>
                         <Text style={{ textAlign: 'center', color: '#fff', fontSize: 16, fontWeight: '700' }}>Registrasi</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ backgroundColor: "#2196F3", padding: 15, borderRadius: 10, marginHorizontal: 16, marginTop: 20, width: 160 }} onPress={reset}>
+                    <TouchableOpacity style={{ backgroundColor: "#2196F3", padding: 15, borderRadius: 10, marginTop: 20, width: 160, elevation: 5 }} onPress={reset}>
                         <Text style={{ textAlign: 'center', color: '#fff', fontSize: 16, fontWeight: '700' }}>Reset</Text>
                     </TouchableOpacity>
                 </View>

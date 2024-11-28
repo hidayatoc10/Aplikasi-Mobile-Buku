@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Alert, Image, Text, TouchableOpacity, View, ScrollView } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
 import axios from 'axios';
-
+import { API } from "../API/api";
 const Belajar = () => {
     const [gambar, setGambar] = useState("");
     const [gambarUri, setGambarUri] = useState("");
@@ -33,12 +33,12 @@ const Belajar = () => {
         const formData = new FormData();
         formData.append('file', {
             uri: gambarUri,
-            type: 'image/jpeg', // or the correct MIME type for your image
+            type: 'image/jpeg',
             name: 'image.jpg'
         });
 
         try {
-            const response = await axios.post("http://192.168.80.251:5000/api/gambar", formData, {
+            const response = await axios.post(`${API}/api/gambar`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }
@@ -53,7 +53,7 @@ const Belajar = () => {
 
     const fetchImages = async () => {
         try {
-            const response = await axios.get("http://192.168.80.251:5000/api/gambar");
+            const response = await axios.get(`${API}/api/gambar`);
             setFetchedImages(response.data);
         } catch (error) {
             Alert.alert("Failed to fetch images");

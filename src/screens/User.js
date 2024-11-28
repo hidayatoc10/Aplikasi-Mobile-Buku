@@ -81,7 +81,7 @@ const User = () => {
 
     return (
         <View style={{ flex: 1 }}>
-            <View style={{ backgroundColor: "#2196F3", padding: 25, flexDirection: 'row' }}>
+            <View style={{ backgroundColor: "#2196F3", padding: 20, flexDirection: 'row', elevation: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("Home")} style={{ flex: 2 }}>
                     <Icon2 name="arrow-back-outline" size={25} color="#fff" />
                 </TouchableOpacity>

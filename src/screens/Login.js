@@ -83,7 +83,7 @@ const Login = () => {
                     <Text style={{ marginLeft: 25, color: '#000', fontSize: 14 }}>Please login using your username and password to continue</Text>
                 </View>
                 <View>
-                    <TextInput placeholder="Username" tabIndex={1} style={{ borderWidth: 1, borderColor: '#000', marginHorizontal: 25, marginTop: 30, borderRadius: 8, paddingLeft: 15, fontSize: 14, color: '#000', fontWeight: 'bold' }} value={username} onChangeText={(text) => { (setUsername(text)) }} />
+                    <TextInput placeholder="Username" autoFocus tabIndex={1} style={{ borderWidth: 1, borderColor: '#000', marginHorizontal: 25, marginTop: 30, borderRadius: 8, paddingLeft: 15, fontSize: 14, color: '#000', fontWeight: 'bold' }} value={username} onChangeText={(text) => { (setUsername(text)) }} />
                     <View style={{ flexDirection: 'row', borderWidth: 1, borderColor: '#000', marginHorizontal: 25, marginTop: 14, borderRadius: 8, alignItems: 'center' }}>
                         <TextInput
                             placeholder="Password"
@@ -98,7 +98,7 @@ const Login = () => {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <TouchableOpacity style={{ backgroundColor: "#2196F3", padding: 15, borderRadius: 10, marginHorizontal: 25, marginTop: 30 }} onPress={btnLogin}>
+                <TouchableOpacity style={{ backgroundColor: "#2196F3", padding: 15, borderRadius: 10, marginHorizontal: 25, marginTop: 30, elevation: 10 }} onPress={btnLogin}>
                     <Text style={{ textAlign: 'center', color: '#fff', fontSize: 16, fontWeight: '700' }}>Login</Text>
                 </TouchableOpacity>
                 <View>
